@@ -1,2 +1,2 @@
 # Project
-Some flat and simple C programs. Can be used for mini-projects :)
+Some flat and simple code snippets!
