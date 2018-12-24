@@ -1,0 +1,30 @@
+import java.util.*;
+import java.io.*;
+class Main {
+  public static void main(String[] args) {
+    Random rand=new Random();
+    int i=0,n;
+    System.out.println("A random number is generated under 50, try to guess it");
+    Scanner sc = new Scanner(System.in);
+    i=rand.nextInt(50)+1;
+    
+    while(true){
+      n = sc.nextInt();
+      if(i!=n)
+      {      
+      if(i>n)
+      {
+        System.out.println("Higher!");
+      }
+      if(i<n)
+      {
+        System.out.println("Lower!");
+      }
+      }
+      else{
+        System.out.println("Correct");
+        break;
+      }   
+    }
+  }
+}
