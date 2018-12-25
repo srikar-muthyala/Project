@@ -1,0 +1,12 @@
+import numpy as np
+a=[]
+b=[]
+rows=int(input())
+cols=int(input())
+for i in range(cols):
+  a=[]
+  for j in range(rows):
+    a.append(input())
+  b.append(a)
+mat=np.matrix(b)
+print(np.sort(mat,axis=0))
