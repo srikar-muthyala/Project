@@ -1,0 +1,144 @@
+import java.util.*;
+class Main{
+  static void factorial()
+  {
+    int a=1;
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=1;i<=n;++i)
+    {
+      a=a*i;
+    }
+    System.out.println(a);
+  }
+  static void fibonacci()
+  {
+    int a=0,b=1,c;
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=0;i<n;++i)
+    {
+      System.out.println(a);
+      c=a+b;
+      a=b;
+      b=c;
+    }
+  }
+  static void pattern()
+  {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=1;i<=n;++i)
+    {
+      for(int j=1;j<=i;++j)
+      {
+        System.out.print("* ");
+      }
+      System.out.println();
+    }
+
+  }
+  static void matrix()
+  {
+    int sum=0,high=0;
+    int arr[][]=new int[10][10];
+    Scanner sc=new Scanner(System.in);
+    int rows=sc.nextInt();
+    int cols=sc.nextInt();
+    for(int i=0;i<rows;++i)
+    {
+      for(int j=0;j<cols;++j)
+      {
+        arr[i][j]=sc.nextInt();
+      }
+    }
+    for(int i=0;i<rows;++i)
+    {
+      for(int j=0;j<cols;++j)
+      {
+        System.out.print(arr[i][j]+" ");
+        sum=sum+arr[i][j];
+        if(arr[i][j]>high)
+        {
+          high=arr[i][j];
+        }
+      }
+      System.out.println();
+    }
+    System.out.println(sum);
+    System.out.println(high);
+  }
+  static void largest()
+  {
+    int h=0;
+    int a[]=new int[100];
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=0;i<n;++i)
+    {
+      a[i]=sc.nextInt();
+    }
+    for(int i=0;i<n;++i)
+    {
+      if(a[i]>h)
+      {
+        h=a[i];
+      }
+    }
+    System.out.println("Highest is: "+h);
+  }
+  static void oddeven()
+  {
+    int x,odd=0,even=0;
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int a[]=new int[10];
+    for(int j=0;j<n;++j)
+    {
+      a[j]=sc.nextInt();
+    }
+    for(int i=0;i<n;++i)
+    {
+      x=a[i]%2;
+      if(x==0)
+      {
+        System.out.println("Even");
+        even+=1;
+      }
+      else
+      {
+        System.out.println("Odd");
+        odd+=1;
+      }
+    }
+    System.out.println("Even: "+even);
+    System.out.println("Odd: "+odd);
+  }
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("1.factorial 2.fibonacci 3.matrix 4.largest 5.pattern 6.oddeven");
+    int z=sc.nextInt();
+    switch(z)
+    {
+      case 1:
+      factorial();
+      break;
+      case 2:
+      fibonacci();
+      break;
+      case 3:
+      matrix();
+      break;
+      case 4:
+      largest();
+      break;
+      case 5:
+      pattern();
+      break;
+      case 6:
+      oddeven();
+      break;
+    }
+  } 
+}
